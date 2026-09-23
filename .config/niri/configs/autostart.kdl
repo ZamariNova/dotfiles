@@ -1,0 +1,24 @@
+// ======================== Niri Config ========================
+// =============================================================
+
+// Spawn at Startup --------------------------------------------
+spawn-at-startup "noctalia"
+spawn-sh-at-startup "vicinae server"
+spawn-sh-at-startup "sleep 2.0 && vesktop"
+spawn-sh-at-startup "sleep 2.0 && pcloud"
+
+// Environment Variables ---------------------------------------
+environment {
+    XDG_CURRENT_DESKTOP "niri"
+    //ELECTRON_OZONE_PLATFORM_HINT "auto"
+    //QT_QPA_PLATFORM "wayland"
+    //XDG_SESSION_TYPE "wayland"
+    QT_QPA_PLATFORMTHEME "gtk"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    GTK_CSD "0"
+}
+
+// Disable Settings --------------------------------------------
+hotkey-overlay {
+    skip-at-startup
+}

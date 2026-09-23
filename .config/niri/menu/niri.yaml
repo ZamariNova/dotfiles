@@ -1,0 +1,283 @@
+# Theming
+font: JetBrainsMono Nerd Font 12
+background: "#181825"
+color: "#cdd6f4"
+border: "#cba6f7"
+separator: " ➜ "
+border_width: 2
+corner_r: 10
+padding: 15 # Defaults to corner_r
+rows_per_column: 5 # No limit by default
+column_padding: 25 # Defaults to padding
+
+# Anchor and margin
+anchor: center # One of center, left, right, top, bottom, bottom-left, top-left, etc.
+# Only relevant when anchor is not center
+margin_right: 0
+margin_bottom: 0
+margin_left: 0
+margin_top: 0
+
+# namespace to use for the layer shell surface
+# namespace: "wlr_which_key"
+
+# Permits key bindings that conflict with compositor key bindings.
+# Default is `false`.
+inhibit_compositor_keyboard_shortcuts: true
+
+# Try to guess the correct keyboard layout to use. Default is `false`.
+auto_kbd_layout: true
+
+menu:
+  - key: "f"
+    desc: focus
+    submenu:
+      - key: "m"
+        desc: monitor
+        submenu:
+          - key: "h"
+            desc: left
+            cmd: niri msg action focus-monitor-left
+          - key: "j"
+            desc: down
+            cmd: niri msg action focus-monitor-down
+          - key: "k"
+            desc: up
+            cmd: niri msg action focus-monitor-up
+          - key: "l"
+            desc: right
+            cmd: niri msg action focus-monitor-right
+          - key: "p"
+            desc: previous
+            cmd: niri msg action focus-monitor-previous
+          - key: "n"
+            desc: next
+            cmd: niri msg action focus-monitor-next
+          - key: "1"
+            desc: 1
+            cmd: niri msg action focus-monitor DP-3
+          - key: "2"
+            desc: 2
+            cmd: niri msg action focus-monitor DP-1
+          - key: "3"
+            desc: 3
+            cmd: niri msg action focus-monitor DP-2
+      - key: "w"
+        desc: window
+        submenu:
+          - key: "j"
+            desc: down
+            cmd: niri msg action focus-window-down
+          - key: "k"
+            desc: up
+            cmd: niri msg action focus-window-up
+          - key: "p"
+            desc: previous
+            cmd: niri msg action focus-window-previous
+      - key: "W"
+        desc: workspace
+        submenu:
+          - key: "j"
+            desc: down
+            cmd: niri msg action focus-workspace-down
+          - key: "k"
+            desc: up
+            cmd: niri msg action focus-workspace-up
+          - key: "p"
+            desc: previous
+            cmd: niri msg action focus-workspace-previous
+          - key: "1"
+            desc: 1
+            cmd: niri msg action focus-workspace 1
+          - key: "2"
+            desc: 2
+            cmd: niri msg action focus-workspace 2
+          - key: "3"
+            desc: 3
+            cmd: niri msg action focus-workspace 3
+  - key: "w"
+    desc: move window
+    submenu:
+      - key: "m"
+        desc: to monitor
+        submenu:
+          - key: "h"
+            desc: left
+            cmd: niri msg action move-window-to-monitor-left
+          - key: "j"
+            desc: down
+            cmd: niri msg action move-window-to-monitor-down
+          - key: "k"
+            desc: up
+            cmd: niri msg action move-window-to-monitor-up
+          - key: "l"
+            desc: right
+            cmd: niri msg action move-window-to-monitor-right
+          - key: "p"
+            desc: previous
+            cmd: niri msg action move-window-to-monitor-previous
+          - key: "n"
+            desc: next
+            cmd: niri msg action move-window-to-monitor-next
+          - key: "1"
+            desc: next
+            cmd: niri msg action move-window-to-monitor DP-6
+          - key: "2"
+            desc: next
+            cmd: niri msg action move-window-to-monitor DP-4
+          - key: "3"
+            desc: next
+            cmd: niri msg action move-window-to-monitor eDP-1
+      - key: "w"
+        desc: to workspace
+        submenu:
+          - key: "j"
+            desc: down
+            cmd: niri msg action move-window-to-workspace-down
+          - key: "k"
+            desc: up
+            cmd: niri msg action move-window-to-workspace-up
+          - key: "1"
+            desc: 1
+            cmd: niri msg action move-window-to-workspace 1
+          - key: "2"
+            desc: 2
+            cmd: niri msg action move-window-to-workspace 2
+          - key: "3"
+            desc: 3
+            cmd: niri msg action move-window-to-workspace 3
+          - key: "4"
+            desc: 4
+            cmd: niri msg action move-window-to-workspace 4
+          - key: "5"
+            desc: 5
+            cmd: niri msg action move-window-to-workspace 5
+  - key: "W"
+    desc: move workspace
+    submenu:
+      - key: "j"
+        desc: down
+        cmd: niri msg action move-workspace-down
+      - key: "k"
+        desc: up
+        cmd: niri msg action move-workspace-up
+      - key: "1"
+        desc: 1
+        cmd: niri msg action move-workspace-to-index 1
+      - key: "2"
+        desc: 2
+        cmd: niri msg action move-workspace-to-index 2
+      - key: "3"
+        desc: 3
+        cmd: niri msg action move-workspace-to-index 3
+      - key: "4"
+        desc: 4
+        cmd: niri msg action move-workspace-to-index 4
+      - key: "5"
+        desc: 5
+        cmd: niri msg action move-workspace-to-index 5
+      - key: "m"
+        desc: to monitor
+        submenu:
+          - key: "h"
+            desc: left
+            cmd: niri msg action move-workspace-to-monitor-left
+          - key: "j"
+            desc: down
+            cmd: niri msg action move-workspace-to-monitor-down
+          - key: "k"
+            desc: up
+            cmd: niri msg action move-workspace-to-monitor-up
+          - key: "l"
+            desc: right
+            cmd: niri msg action move-workspace-to-monitor-right
+          - key: "p"
+            desc: previous
+            cmd: niri msg action move-workspace-to-monitor-previous
+          - key: "n"
+            desc: next
+            cmd: niri msg action move-workspace-to-monitor-next
+          - key: "1"
+            desc: next
+            cmd: niri msg action move-workspace-to-monitor DP-6
+          - key: "2"
+            desc: next
+            cmd: niri msg action move-workspace-to-monitor DP-4
+          - key: "3"
+            desc: next
+            cmd: niri msg action move-workspace-to-monitor eDP-1
+  - key: "c"
+    desc: move column
+    submenu:
+      - key: "h"
+        desc: "left"
+        cmd: niri msg action move-column-left
+      - key: "l"
+        desc: "right"
+        cmd: niri msg action move-column-right
+      - key: "<"
+        desc: "first"
+        cmd: niri msg action move-column-to-first
+      - key: ">"
+        desc: "last"
+        cmd: niri msg action move-column-to-last
+      - key: "H"
+        desc: "left or monitor left"
+        cmd: niri msg action move-column-left-or-to-monitor-left
+      - key: "L"
+        desc: "right or monitor right"
+        cmd: niri msg action move-column-right-or-to-monitor-right
+      - key: "m"
+        desc: to monitor
+        submenu:
+          - key: "h"
+            desc: left
+            cmd: niri msg action move-column-to-monitor-left
+          - key: "j"
+            desc: down
+            cmd: niri msg action move-column-to-monitor-down
+          - key: "k"
+            desc: up
+            cmd: niri msg action move-column-to-monitor-up
+          - key: "l"
+            desc: right
+            cmd: niri msg action move-column-to-monitor-right
+          - key: "p"
+            desc: previous
+            cmd: niri msg action move-column-to-monitor-previous
+          - key: "n"
+            desc: next
+            cmd: niri msg action move-column-to-monitor-next
+          - key: "1"
+            desc: next
+            cmd: niri msg action move-column-to-monitor DP-6
+          - key: "2"
+            desc: next
+            cmd: niri msg action move-column-to-monitor DP-4
+          - key: "3"
+            desc: next
+            cmd: niri msg action move-column-to-monitor eDP-1
+      - key: "w"
+        desc: to workspace
+        submenu:
+          - key: "j"
+            desc: down
+            cmd: niri msg action move-column-to-workspace-down
+          - key: "k"
+            desc: up
+            cmd: niri msg action move-column-to-workspace-up
+          - key: "1"
+            desc: 1
+            cmd: niri msg action move-column-to-workspace 1
+          - key: "2"
+            desc: 2
+            cmd: niri msg action move-column-to-workspace 2
+          - key: "3"
+            desc: 3
+            cmd: niri msg action move-column-to-workspace 3
+          - key: "4"
+            desc: 4
+            cmd: niri msg action move-column-to-workspace 4
+          - key: "5"
+            desc: 5
+            cmd: niri msg action move-column-to-workspace 5

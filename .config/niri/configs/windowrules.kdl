@@ -1,0 +1,71 @@
+// ======================= Window Rules ========================
+// =============================================================
+
+// General Window Settings -------------------------------------
+window-rule {
+    geometry-corner-radius 10
+    clip-to-geometry true
+    draw-border-with-background false
+    popups { geometry-corner-radius 10; }
+}
+
+// Window Blur Settings ----------------------------------------
+window-rule {
+    opacity 0.95
+    background-effect { blur true; xray false; }
+    popups { opacity 0.95; background-effect { blur true; xray false; }; }
+    // Exclude List: these apps will not get transparance and blur
+    exclude app-id="do-not-directly-run-firestorm-bin"
+}
+
+// Start Fullscreen --------------------------------------------
+window-rule {
+    open-maximized true
+    match title=r#"Firestorm$"#
+}
+
+// Start Floating ----------------------------------------------
+window-rule {
+    open-floating true
+    default-column-width { fixed 1920; }
+    default-window-height { fixed 1080; }
+    match title=r#"satty$"#
+}
+
+// Steam fixes
+window-rule {
+    match app-id=r#"^steam$"# title=r#"^notificationtoasts_\d+_desktop$"#
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+    open-focused false
+}
+
+// Zen Browser -------------------------------------------------
+window-rule { match app-id="zen"; open-on-workspace "󰖟"; open-maximized true; }
+
+// Zen Picture-in-Picture Fix ----------------------------------
+window-rule {
+    match title="Picture-in-Picture"
+    open-floating true
+    default-column-width { fixed 720; }
+    default-window-height { fixed 405; }
+    default-floating-position x=10 y=10 relative-to="bottom-right"
+}
+
+// block out password managers from screen capture.
+window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+    //block-out-from "screencast" // Third Party Screenshot Tools
+}
+
+window-rule {
+    match app-id="^steam_app_359320$"
+    open-floating false
+    open-fullscreen true
+    open-maximized false
+    open-maximized-to-edges false
+    open-on-output "DP-1"
+
+}

@@ -1,0 +1,55 @@
+prefer-no-csd
+
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+// screenshot-path null
+
+layout {
+    gaps 10
+    background-color "transparent"
+    center-focused-column "never"
+    default-column-display "normal"
+    default-column-width { proportion 0.5; }
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66666
+    }
+    preset-window-heights {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66666
+    }
+    shadow {
+        on
+        softness 30
+        spread 3
+        offset x=0 y=5
+        draw-behind-window true
+    }
+    focus-ring {
+        off
+        width 2
+    }
+    border {
+        on
+        width 2
+    }
+    tab-indicator {
+        on
+        hide-when-single-tab
+        place-within-column
+        gap 5
+        width 12
+        length total-proportion=1.0
+        position "top"
+        gaps-between-tabs 2
+        corner-radius 8
+        inactive-color "gray"
+    }
+}
+
+gestures {
+    hot-corners {
+        off
+    }
+}

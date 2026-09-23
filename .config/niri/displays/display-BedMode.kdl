@@ -1,0 +1,52 @@
+// You can configure outputs by their name, which you can find
+// by running `niri msg outputs` while inside a niri instance.
+// The built-in laptop monitor is usually called "eDP-1".
+// Find more information on the wiki:
+// https://yalter.github.io/niri/Configuration:-Outputs
+// Remember to uncomment the node by removing "/-"!ok
+
+// Monitor Config
+output "DP-1" {
+    off
+    mode "2560x1440@143.999"
+    position x=2560 y=0
+    transform "normal"
+    scale 1
+    variable-refresh-rate on-demand=true
+    focus-at-startup
+    hot-corners {
+        off
+    }
+}
+output "DP-2" {
+    off
+    mode "2560x1440@143.999"
+    position x=5120 y=0
+    transform "normal"
+    scale 1
+    variable-refresh-rate on-demand=true
+    hot-corners {
+        off
+    }
+}
+output "DP-3" {
+    // off
+    mode "2560x1440@143.999"
+    position x=0 y=0
+    transform "normal"
+    scale 1
+    variable-refresh-rate on-demand=true
+    hot-corners {
+        off
+    }
+}
+output "HDMI-A-1" {
+    off
+    mode "2560x1600@59.941"
+    position x=2816 y=1440
+    transform "normal"
+    scale 1.25
+    hot-corners {
+        off
+    }
+}

@@ -1,0 +1,40 @@
+binds {
+    // ===================== Noctalia (System) =====================
+    // #"Noctalia (System)"  <-- Niri Keybinds Tag  ================
+    // =============================================================
+
+    // Screen Brightness -------------------------------------------
+    XF86MonBrightnessUp  allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness increase"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call brightness decrease"; }
+
+    // Screen Lock  -------------------------------------------------
+    Super+Alt+L  hotkey-overlay-title="Lock the Screen" { spawn-sh "qs -c noctalia-shell ipc call lockScreen lock"; }
+    Ctrl+Alt+Delete  hotkey-overlay-title="Session Menu" { spawn-sh "qs -c noctalia-shell ipc call sessionMenu toggle"; }
+
+    // Media Controls  ----------------------------------------------
+    XF86AudioPlay  hotkey-overlay-title="Media Play/Pause" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media playPause"; }
+    XF86AudioStop  hotkey-overlay-title="Media Stop" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media stop"; }
+    XF86AudioNext  hotkey-overlay-title="Media Next" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media next"; }
+    XF86AudioPrev  hotkey-overlay-title="Media Previous" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call media previous"; }
+    XF86AUDIORAISEVOLUME  hotkey-overlay-title="Audio Volume Up" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increase"; }
+    XF86AUDIOLOWERVOLUME  hotkey-overlay-title="Audio Volume Down" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decrease"; }
+    XF86AUDIOMUTE  hotkey-overlay-title="Audio Mute" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteOutput"; }
+    Alt+XF86AUDIORAISEVOLUME hotkey-overlay-title="Audio Mic Volume Up" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume increaseInput"; }
+    Alt+XF86AUDIOLOWERVOLUME hotkey-overlay-title="Audio Mic Volume Down" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume decreaseInput"; }
+    Alt+XF86AUDIOMUTE hotkey-overlay-title="Audio Mic Mute" allow-when-locked=true { spawn-sh "qs -c noctalia-shell ipc call volume muteInput"; }
+
+    // ===================== Noctalia (Plugins) ====================
+    // #"Noctalia (Plugins)"  <-- Niri Keybinds Tag  ===============
+    // =============================================================
+    Mod+F1 hotkey-overlay-title="Keybinds Cheatsheet" { spawn-sh "qs -c noctalia-shell ipc call plugin:keybind-cheatsheet toggle"; }
+    Mod+F2 hotkey-overlay-title="Mimeapps Config" { spawn-sh "qs -c noctalia-shell ipc call plugin:mimeapp-gui openPanel"; }
+
+    Mod+V hotkey-overlay-title="Clipboard Show" { spawn-sh "qs -c noctalia-shell ipc call plugin:clipboard toggle"; }
+    Mod+Shift+V hotkey-overlay-title="Clipboard Clear" { spawn-sh "qs -c noctalia-shell ipc call plugin:clipboard wipe"; }
+
+    // ===================== Vicinae (Launcher) ====================
+    // #"Vicinae (Launcher)"  <-- Niri Keybinds Tag  ===============
+    // =============================================================
+    Mod+D  hotkey-overlay-title="Vicinae: Toggle" repeat=false { spawn "vicinae" "toggle"; }
+    Mod+P  hotkey-overlay-title="Vicinae: Clipboard History" repeat=false { spawn "vicinae" "vicinae://launch/clipboard/history"; }
+}

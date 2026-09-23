@@ -1,0 +1,17 @@
+// ======================== Niri Config ========================
+// =============================================================
+
+// Auto Generated Files ----------------------------------------
+include "./monitors.kdl"
+include "./noctalia.kdl"
+
+// Core Configs ------------------------------------------------
+include "./configs/animation.kdl"
+include "./configs/autostart.kdl"
+include "./configs/binds.kdl"
+include "./configs/binds-niri.kdl"
+include "./configs/general.kdl"
+include "./configs/input.kdl"
+include "./configs/shell.kdl"
+include "./configs/windowrules.kdl"
+include "./configs/workspaces.kdl"

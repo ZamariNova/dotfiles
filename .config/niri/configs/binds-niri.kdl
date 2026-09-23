@@ -1,0 +1,17 @@
+binds {
+    // #"Noctalia"
+    Mod+Space hotkey-overlay-title="Noctalia: Launcher" { spawn-sh "noctalia msg panel-toggle launcher"; }
+
+    Mod+F1 hotkey-overlay-title="Noctalia Plugin: Keymap" { spawn-sh "noctalia msg panel-toggle blackbartblues/keymap:panel"; }
+
+    XF86AudioPlay hotkey-overlay-title="Noctalia Media: Play/Pause" allow-when-locked=true { spawn-sh "noctalia msg media toggle"; }
+    XF86AudioStop hotkey-overlay-title="Noctalia Media: Stop" allow-when-locked=true { spawn-sh "noctalia msg media stop"; }
+    XF86AudioNext hotkey-overlay-title="Noctalia Media: Next" allow-when-locked=true { spawn-sh "noctalia msg media next"; }
+    XF86AudioPrev hotkey-overlay-title="Noctalia Media: Previous" allow-when-locked=true { spawn-sh "noctalia msg media previous"; }
+    XF86AudioRaiseVolume hotkey-overlay-title="Noctalia Volume: Up" allow-when-locked=true { spawn-sh "noctalia msg volume-up"; }
+    XF86AudioLowerVolume hotkey-overlay-title="Noctalia Volume: Down" allow-when-locked=true { spawn-sh "noctalia msg volume-down"; }
+    XF86AudioMute hotkey-overlay-title="Noctalia Volume: Mute" allow-when-locked=true { spawn-sh "noctalia msg volume-mute"; }
+    Alt+XF86AudioRaiseVolume hotkey-overlay-title="Noctalia Volume: Mic Up" allow-when-locked=true { spawn-sh "noctalia msg mic-volume-up"; }
+    Alt+XF86AudioLowerVolume hotkey-overlay-title="Noctalia Volume: Mic Down" allow-when-locked=true { spawn-sh "noctalia msg mic-volume-down"; }
+    Alt+XF86AudioMute hotkey-overlay-title="Noctalia Volume: Mic Mute" allow-when-locked=true { spawn-sh "noctalia msg mic-mute"; }
+}
